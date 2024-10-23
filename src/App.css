@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dark Mode - Header Text Color */
+.dark-mode .hero h1,
+.dark-mode .hero p {
+  color: #bb86fc;
+  /* Set to the same color as your dark mode button */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Dark Mode - Navbar */
+.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .hero {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .btn-primary {
+  background-color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+.dark-mode .btn-outline-primary {
+  color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #000;
+  color: #bb86fc;
+}
+
+.dark-mode .bg-light {
+  background-color: #333 !important;
+}
+
+.dark-mode .navbar-nav .nav-link.active {
+  color: #bb86fc;
+  /* Active link color in dark mode */
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar-nav .nav-item .nav-link {
+  color: #bb86fc;
+  padding: 10px 20px;
+  font-weight: bold;
+  opacity: 0.7;
+  /* Dim inactive links */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for opacity */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-nav .nav-link.active {
+  opacity: 1;
+  /* Fully opaque active link */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-brand {
+  color: #bb86fc;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #007bff;
+  color: white;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active navbar link styling */
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #007bff;
+  /* You can adjust this color */
+}
+
+.navbar-nav .nav-link {
+  color: #343a40;
+  /* Default color for inactive links */
+  opacity: 0.7;
+  /* Dim inactive links */
+  transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  opacity: 2;
+  /* Full opacity for active link */
 }
